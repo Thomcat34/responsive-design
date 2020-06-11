@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ma belle page HTML</title>
+    <link rel="stylesheet" href="normalize.css">
+    <script type="text/javascript" src="./index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:100,400,700,800,900&display=swap" rel="stylesheet">
+    <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
+    <script type='text/javascript'>
+        $(window).load(function(){
+        function fixDiv() {
+          var $cache = $('.menuburger'); 
+          if ($(window).scrollTop() > 130) 
+            $cache.css({'position': 'fixed', opacity: '1'}); 
+          else
+            $cache.css({'position': 'relative', opacity:'0'});
+        }
+        $(window).scroll(fixDiv);
+        fixDiv();
+        });
+      </script>
+</head>
+<div class="nav">
+    <img id="logo" href="index.html" src="./LAPPAT/LAPPAT/001_AssetGraphique/logo_blanc.png" alt="charg">
+    <a href="index.html" class="navbutton" id="accueil">| Accueil</a>
+    <a href="boutique.html" class="navbutton">Boutique</a>
+    <a href="contact.html" class="navbutton">Contact</a>
+    <nav role="navigation">
+        <div id="menuburger" class="menuburger">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="index.html">
+                        <li>Accueil</li>
+                    </a>
+                    <a href="boutique.html">
+                        <li>Boutique</li>
+                    </a>
+                    <a href="contact.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>
+
+<body id="indexbody">
+    <div id="flechegauche"> < </div>
+    <div id="flechedroite"> > </div>
+    <div class="article">
+        <img id="imgpoisson" src="./LAPPAT/LAPPAT/001_AssetGraphique/poisson.png" alt="charg">
+        <h1 id="bonite">LA BONITE</h1>
+        <h1 id="poisson">POISSON MARIN</h1>
+        <h4 id="texte">La bonite est certainement l'un des poissons les plus amusant à pêcher en milieu marin</h4>
+        <h4 id="texte">Découvrez dans cette article, comment débuter la pêche à la bonite</h4>
+    </div>
+    <div>
+        <div id="taillearticle">
+            <img id="imgarticle" src="./LAPPAT/LAPPAT/002_IMG/claudio-guglieri-K2RH1QZdLF4-unsplash.jpg" alt="charg">
+        </div>
+        <div class="suitearticle">
+            <h4>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed consequat quam, ut rhoncus velit.
+                Vivamus lacinia nibh vel tristique tempus. Sed et sem a est efficitur interdum. Orci varius natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean erat tellus, pretium vitae ante
+                vel, commodo ullamcorper urna. Suspendisse vitae quam viverra, dictum quam vitae, eleifend urna. Donec a
+                tincidunt augue. Sed semper lacus diam, at finibus ante placerat vitae.
+    
+                Phasellus feugiat dignissim ligula id tincidunt. Curabitur tempus tempor vulputate. Morbi quis fringilla
+                erat. Aenean in justo non urna elementum vulputate. Donec quis malesuada ipsum. Sed quis mattis lorem. Etiam
+                euismod malesuada placerat.
+    
+                Quisque pulvinar efficitur arcu, sit amet egestas ligula molestie non. Nunc elementum vel dui id efficitur.
+                Etiam sit amet ante interdum, congue lacus eget, pellentesque velit. Sed dictum accumsan velit vitae porta.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Orci varius
+                natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec venenatis, nulla ac lacinia
+                semper, dui leo pharetra erat, eget euismod odio orci vitae nisl. Cras efficitur ac nibh ac vulputate.
+            </h4>
+        </div>
+    </div>
+</body>
+
+</html>

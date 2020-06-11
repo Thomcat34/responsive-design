@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ma belle page HTML</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:100,400,700,800,900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
+    <script type='text/javascript'>
+        $(window).load(function(){
+        function fixDiv() {
+          var $cache = $('#menuburger'); 
+          if ($(window).scrollTop() > 130) 
+            $cache.css({'position': 'fixed', opacity: '1'}); 
+          else
+            $cache.css({'position': 'relative', opacity:'0'});
+        }
+        $(window).scroll(fixDiv);
+        fixDiv();
+        });
+      </script>
+</head>
+<div class="nav">
+  <img id="logo" href="index.html" src="./LAPPAT/LAPPAT/001_AssetGraphique/logo_blanc.png" alt="charg">
+  <a href="index.html" class="navbutton">Accueil</a>
+  <a href="boutique.html" class="navbutton">Boutique</a>
+  <a href="contact.html" class="navbutton" id="contact">| Contact</a>
+  <nav role="navigation">
+    <div id="menuburger">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <a href="index.html">
+            <li>Accueil</li>
+          </a>
+          <a href="boutique.html">
+            <li>Boutique</li>
+          </a>
+          <a href="contact.html">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<body class="contactbody" id="indexbody">
+  <div id="background-wrap">
+      <form class="form">
+        <h2 id="contactus">CONTACTEZ-NOUS</h2>
+        <p class="pbefore" type="Nom:"><input placeholder="Votre nom ici.."></input></p>
+        <p class="pbefore" type="Email:"><input placeholder="Un simple moyen de communiquer.."></input></p>
+        <p class="pbefore" type="Message:"><input placeholder="Une remarque ? Un conseil ?"></input></p>
+        <button id="sendbut">Envoyer</button>
+        <div id="numcontact">
+          <span class="fa fa-phone"></span>06.58.71.11.98
+          <span class="fa fa-envelope-o"></span> thomain34@gmail.com
+        </div>
+      </form>
+      <div class="bubble x1"></div>
+    <div class="bubble x2"></div>
+    <div class="bubble x3"></div>
+    <div class="bubble x4"></div>
+    <div class="bubble x5"></div>
+    <div class="bubble x6"></div>
+    <div class="bubble x7"></div>
+    <div class="bubble x8"></div>
+    <div class="bubble x9"></div>
+    <div class="bubble x10"></div>
+    </div>
+  </div>
+</body>
+
+</html

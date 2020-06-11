@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ma belle page HTML</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="./index.js"></script>
+    <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>  
+    <link href="https://fonts.googleapis.com/css?family=Barlow:100,400,700,800,900&display=swap" rel="stylesheet">
+    <script type='text/javascript'>
+        // Pour les catégories qui se bloquent
+        $(window).load(function(){
+        function fixDiv() {
+          var $cache = $('#categories'); 
+          if ($(window).scrollTop() > 130) 
+            $cache.css({'position': 'fixed', 'top': '0px', 'margin-left' : '21.2%', 'margin-top':'10px'});
+          else
+            $cache.css({'position': 'relative', 'top': 'auto', 'margin-top':'80px'});
+        }
+        $(window).scroll(fixDiv);
+        fixDiv();
+        });  
+      </script>
+    <script type='text/javascript'>
+        $(window).load(function(){
+        function fixDiv() {
+          var $cache = $('#menuburger'); 
+          if ($(window).scrollTop() > 130) 
+            $cache.css({'position': 'fixed', opacity: '1'}); 
+          else
+            $cache.css({'position': 'fixed', opacity:'1'});
+        }
+        $(window).scroll(fixDiv);
+        fixDiv();
+        });
+    </script>
+    <script type='text/javascript'>
+        $(function(){
+
+            'use strict';
+
+            $('.cat').click(function(e){
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $('#' +$(this).data('scroll')).offset().top
+                }, 2000)
+            })
+        });
+    </script>
+</head>
+<div class="nav">
+    <img id="back" src="./LAPPAT/LAPPAT/001_AssetGraphique/fond.png" alt="">
+    <img id="logo" href="index.html" src="./LAPPAT/LAPPAT/001_AssetGraphique/logo_blanc.png" alt="charg">
+    <a href="index.html" class="navbutton2">Accueil</a>
+    <a href="boutique.html" class="navbutton2" id="boutique">| Boutique</a>
+    <a href="contact.html" class="navbutton2">Contact</a>
+    <nav role="navigation">
+        <div id="menuburger">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <li>
+                        <a href="index.html">
+                            Accueil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="boutique.html">
+                            Boutique
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a id="catégo">
+                            Catégories
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cat" href="#" data-scroll="cannes">
+                            Cannes à pêches
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cat" href="#" data-scroll="appats">
+                            Appâts
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cat" href="#" data-scroll="vetements">
+                            Vêtements
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cat" href="#" data-scroll="livres">
+                            Nos livres
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cat" href="#" data-scroll="accessoires">
+                            Accessoires
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<body>
+    <div id="imgscroll">
+        <img id="imgwater" src="https://i.ya-webdesign.com/images/water-surface-png-11.png" alt="charge">
+    </div>
+    <div id="backcat">
+    <ul class="catss" id="categories">
+        <li id="circle1" class="circle" >
+            <a class="cat" href="#" data-scroll="cannes">Cannes à pêches</a>
+        </li>
+        <li id="circle2" class="circle" >
+            <a class="cat" href="#" data-scroll="appats">Appâts</a>
+        </li>
+        <li id="circle3" class="circle" >
+            <a class="cat" href="#" data-scroll="vetements">Vêtements</a>
+        </li>
+        <li id="circle4" class="circle" >
+            <a class="cat" href="#" data-scroll="livres">Nos livres</a>
+        </li>
+        <li id="circle5" class="circle" >
+            <a class="cat" href="#" data-scroll="accessoires">Accessoires</a>
+        </li>
+    </ul>
+    </div>
+    <div id="produits">
+        <h2 id="cannes" id="scroll1">Cannes à pêches</h2>
+        <div id="prod">
+            <div id="A1">
+                <img id="imagecanne" src="https://static.cms.yp.ca/ecms/media/2/canne_a_peche-1435262671-600x360.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagecanne" src="https://static.cms.yp.ca/ecms/media/2/canne_a_peche-1435262671-600x360.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagecanne" src="https://static.cms.yp.ca/ecms/media/2/canne_a_peche-1435262671-600x360.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagecanne" src="https://static.cms.yp.ca/ecms/media/2/canne_a_peche-1435262671-600x360.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagecanne" src="https://static.cms.yp.ca/ecms/media/2/canne_a_peche-1435262671-600x360.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagecanne" src="https://static.cms.yp.ca/ecms/media/2/canne_a_peche-1435262671-600x360.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagecanne" src="https://static.cms.yp.ca/ecms/media/2/canne_a_peche-1435262671-600x360.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagecanne" src="https://static.cms.yp.ca/ecms/media/2/canne_a_peche-1435262671-600x360.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+        </div>
+
+        <h2 id="appats">Appâts</h2>
+        <div id="prod">
+            <div id="A1">
+                <img id="imageappat" src="https://img3.bgxcdn.com/thumb/view/oaupload/banggood/images/7D/FE/0d529fbf-1b5c-485c-b9b2-18387316dfd7.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imageappat" src="https://img3.bgxcdn.com/thumb/view/oaupload/banggood/images/7D/FE/0d529fbf-1b5c-485c-b9b2-18387316dfd7.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imageappat" src="https://img3.bgxcdn.com/thumb/view/oaupload/banggood/images/7D/FE/0d529fbf-1b5c-485c-b9b2-18387316dfd7.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imageappat" src="https://img3.bgxcdn.com/thumb/view/oaupload/banggood/images/7D/FE/0d529fbf-1b5c-485c-b9b2-18387316dfd7.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imageappat" src="https://img3.bgxcdn.com/thumb/view/oaupload/banggood/images/7D/FE/0d529fbf-1b5c-485c-b9b2-18387316dfd7.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imageappat" src="https://img3.bgxcdn.com/thumb/view/oaupload/banggood/images/7D/FE/0d529fbf-1b5c-485c-b9b2-18387316dfd7.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imageappat" src="https://img3.bgxcdn.com/thumb/view/oaupload/banggood/images/7D/FE/0d529fbf-1b5c-485c-b9b2-18387316dfd7.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imageappat" src="https://img3.bgxcdn.com/thumb/view/oaupload/banggood/images/7D/FE/0d529fbf-1b5c-485c-b9b2-18387316dfd7.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+        </div>
+        
+        <h2 id="vetements">Vêtements</h2>
+        <div id="prod">
+            <div id="A1">
+                <img id="imagevet" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/P%C3%AAcheur_de_ouananiche.JPG" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagevet" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/P%C3%AAcheur_de_ouananiche.JPG" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagevet" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/P%C3%AAcheur_de_ouananiche.JPG" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagevet" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/P%C3%AAcheur_de_ouananiche.JPG" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagevet" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/P%C3%AAcheur_de_ouananiche.JPG" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagevet" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/P%C3%AAcheur_de_ouananiche.JPG" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagevet" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/P%C3%AAcheur_de_ouananiche.JPG" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagevet" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/P%C3%AAcheur_de_ouananiche.JPG" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+        </div>
+        <h2 id="livres">Livres</h2>
+        <div id="prod">
+            <div id="A1">
+                <img id="imagelivre" src="https://images-na.ssl-images-amazon.com/images/I/81g0ktwKvyL.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagelivre" src="https://images-na.ssl-images-amazon.com/images/I/81g0ktwKvyL.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagelivre" src="https://images-na.ssl-images-amazon.com/images/I/81g0ktwKvyL.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagelivre" src="https://images-na.ssl-images-amazon.com/images/I/81g0ktwKvyL.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagelivre" src="https://images-na.ssl-images-amazon.com/images/I/81g0ktwKvyL.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagelivre" src="https://images-na.ssl-images-amazon.com/images/I/81g0ktwKvyL.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagelivre" src="https://images-na.ssl-images-amazon.com/images/I/81g0ktwKvyL.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imagelivre" src="https://images-na.ssl-images-amazon.com/images/I/81g0ktwKvyL.jpg" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+        </div>
+        <h2 id="accessoires">Accessoires</h2>
+        <div id="prod">
+            <div id="A1">
+                <img id="imageacc" src="https://scorpiold.files.wordpress.com/2015/01/accessoires-pour-kayak.png" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imageacc" src="https://scorpiold.files.wordpress.com/2015/01/accessoires-pour-kayak.png" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imageacc" src="https://scorpiold.files.wordpress.com/2015/01/accessoires-pour-kayak.png" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imageacc" src="https://scorpiold.files.wordpress.com/2015/01/accessoires-pour-kayak.png" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imageacc" src="https://scorpiold.files.wordpress.com/2015/01/accessoires-pour-kayak.png" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imageacc" src="https://scorpiold.files.wordpress.com/2015/01/accessoires-pour-kayak.png" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imageacc" src="https://scorpiold.files.wordpress.com/2015/01/accessoires-pour-kayak.png" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+            <div id="A1">
+                <img id="imageacc" src="https://scorpiold.files.wordpress.com/2015/01/accessoires-pour-kayak.png" alt="charg">
+                <p id="descriptif">Nunc vulputate, sem eget rutrum blandit, leo elit convallis elit, non molestie augue tortor a turpis. Quisque ultrices condimentum ex nec convallis. Vivamus non imperdiet velit. Donec efficitur enim diam, ut laoreet justo imperdiet ut. </p>
+                <button class="button white">Buy</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="footer">
+        <div id="TL">
+          Copiright Thomas&Co Company
+        </div>
+      </div>
+</body>
+
+</html>
